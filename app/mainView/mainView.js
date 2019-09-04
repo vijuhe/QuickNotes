@@ -9,6 +9,6 @@ angular.module('quickNotes.mainView', ['ngRoute'])
   });
 }])
 
-.controller('MainCtrl', [function() {
-
+.controller('MainCtrl', ['NotesService', function(NotesService) {
+  this.notes = NotesService.getNotes();
 }]);
