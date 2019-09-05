@@ -1,25 +1,16 @@
 /* app css stylesheet */
 
-.menu {
-  list-style: none;
-  border-bottom: 0.1em solid black;
-  margin-bottom: 2em;
-  padding: 0 0 0.5em;
+.count-title {
+  color: rgb(200, 200, 200);
 }
 
-.menu:before {
-  content: "[";
+.count-number {
+  font-size: 25pt;
+  color: rgb(130, 130, 130);
 }
 
-.menu:after {
-  content: "]";
-}
-
-.menu > li {
-  display: inline;
-}
-
-.menu > li + li:before {
-  content: "|";
-  padding-right: 0.3em;
+#counts-container {
+  background-color: white;
+  padding: 25px 0 25px 20px;
+  max-width: 700px;
 }
