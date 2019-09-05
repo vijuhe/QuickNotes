@@ -7,7 +7,7 @@ angular.module('quickNotes')
     notes: '<'
   },
 
-  controller: function($scope) {
+  controller: function($scope, $uibModal) {
     this.$onInit = function() {
       $scope.selectAll = false;
       $scope.noteSelections = new Array(this.notes.length);
@@ -31,5 +31,25 @@ angular.module('quickNotes')
         this.sort.descending = false;
       }
     }
+
+    $scope.openAddNoteDialog = function() {
+      let addDialog = $uibModal.open({
+        templateUrl: "note-table/add-note-dialog.html",
+        controller: "AddNoteController"
+      });
+    }
+  }
+})
+
+.controller("AddNoteController", function($scope, $uibModalInstance) {
+  $scope.saveNote = function() {
+    if ($scope.newNoteForm.$valid) {
+      // todo: save new note with a service call
+      $uibModalInstance.close("Ok");
+    }
+  }
+
+  $scope.cancel = function() {
+    $uibModalInstance.dismiss();
   }
 });

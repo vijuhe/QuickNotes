@@ -53,3 +53,10 @@
   width: 15px;
   height: 15px;
 }
+
+.note-table-add-button {
+  float: right;
+  width: 160px;
+  background-color: blue;
+  color: rgb(210, 210, 210);
+}
