@@ -1,1 +1,14 @@
-<p>Note table</p>
+<table id="note-table" class="table">
+    <tr id="note-table-header">
+        <th><input type="checkbox" class="note-table-checkbox" ng-change="toggleSelectAll()" ng-model="selectAll"/>ID</th>
+        <th>Title</th>
+        <th>Content</th>
+        <th>Status</th>
+    </tr>
+    <tr class="note-table-data-row" ng-repeat="note in $ctrl.notes">
+        <td class="note-table-data-id"><input type="checkbox" class="note-table-checkbox" ng-model="noteSelections[note.id-1]"/>{{note.id}}</td>
+        <td>{{note.title}}</td>
+        <td>{{note.content}}</td>
+        <td>{{note.status}}</td>
+    </tr>
+</table>

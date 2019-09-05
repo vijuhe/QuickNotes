@@ -14,3 +14,41 @@
   padding: 25px 0 25px 20px;
   max-width: 700px;
 }
+
+#note-table {
+  margin-top: 25px;
+  width: 100%;
+}
+
+#note-table-header {
+  background-color: rgb(155, 155, 155);
+  color: rgb(230, 230, 230);
+  font-size: 10pt;
+}
+
+#note-table-header > th {
+  padding: 5px 10px;
+  font-weight: lighter;
+  border-right: 1px solid rgb(230, 230, 230);
+}
+
+.note-table-data-row {
+  background-color: white;
+  padding: 5px 10px;
+  color: rgb(100, 100, 100);
+}
+
+.note-table-data-row > td {
+  padding: 10px 10px;
+  border-top: 1px solid rgb(230, 230, 230);
+}
+
+.note-table-data-id {
+  color: blue;
+}
+
+.note-table-checkbox {
+  margin-right: 7px;
+  width: 15px;
+  height: 15px;
+}
