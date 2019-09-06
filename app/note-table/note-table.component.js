@@ -41,10 +41,13 @@ angular.module('quickNotes')
   }
 })
 
-.controller("AddNoteController", function($scope, $uibModalInstance) {
+.controller("AddNoteController", ['$scope', '$uibModalInstance', 'NoteService', function($scope, $uibModalInstance, noteService) {
   $scope.saveNote = function() {
     if ($scope.newNoteForm.$valid) {
-      // todo: save new note with a service call
+      noteService.addNote({
+        title: $scope.title,
+        content: $scope.content
+      });
       $uibModalInstance.close("Ok");
     }
   }
@@ -52,4 +55,4 @@ angular.module('quickNotes')
   $scope.cancel = function() {
     $uibModalInstance.dismiss();
   }
-});
+}]);

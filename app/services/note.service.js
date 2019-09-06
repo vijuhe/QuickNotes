@@ -1,8 +1,8 @@
 'use strict';
 
-class NotesService {
-    // Contains hard-coded data
-    // In a real application should get data from the backend
+// Contains hard-coded data
+// In a real application should use data from the backend
+class NoteService {
     getNotes() {
         return [
             {
@@ -25,6 +25,9 @@ class NotesService {
             }
         ];
     }
+
+    addNote(note) {
+    }
 }
 
-export default NotesService;
+export default NoteService;
