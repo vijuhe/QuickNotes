@@ -60,3 +60,25 @@
   background-color: blue;
   color: rgb(210, 210, 210);
 }
+
+.add-note-dialog-button {
+  width: 130px;
+}
+
+#save-note-button {
+  background-color: blue;
+  color: rgb(210, 210, 210);
+}
+
+#cancel-save-note-button {
+  background-color: white;
+  color: blue;
+}
+
+#add-note-dialog-title {
+  margin-bottom: 20px;
+}
+
+#add-note-dialog {
+  padding: 20px;
+}
