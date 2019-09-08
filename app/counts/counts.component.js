@@ -9,12 +9,10 @@ angular.module('quickNotes')
   
   controller: function($scope) {
     this.$onInit = function() {
-        $scope.total = this.notes.length;
-        $scope.completed = this.getNoteCount('Completed');
-        $scope.notCompleted = this.getNoteCount('Not completed');
+        $scope.notes = this.notes;
     }
 
-    this.getNoteCount = function(status) {
+    $scope.getNoteCount = function(status) {
         return this.notes.filter(function(item) { return item.status === status; }).length;
     }
   }
