@@ -1,7 +1,7 @@
 <table id="note-table" class="table">
     <tr id="note-table-header">
         <th ng-click="changeSorting('id')">
-            <input type="checkbox" class="note-table-checkbox" ng-change="toggleSelectAll()" ng-model="selectAll"/>ID
+            <input ng-click="$event.stopPropagation()" type="checkbox" class="note-table-checkbox" ng-change="toggleSelectAll()" ng-model="selectAll"/>ID
         </th>
         <th ng-click="changeSorting('title')">Title</th>
         <th ng-click="changeSorting('content')">Content</th>
