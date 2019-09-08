@@ -1,8 +1,8 @@
-<div id="delete-confirmation-container">
+<div id="delete-confirmation-container" ng-if="areNotesSelected()">
     <i id="delete-confirmation-icon" class="fas fa-exclamation-triangle"></i>
     <span id="delete-notes-question">Do you want to delete these notes?</span>
     <span id="delete-confirmation-buttons">
-        <button type="button" id="delete-notes-button-no" class="btn btn-light delete-confirmation-button">No</button>
-        <button type="button" id="delete-notes-button-yes" class="btn delete-confirmation-button">Yes</button>
+        <button type="button" id="delete-notes-button-no" class="btn btn-light delete-confirmation-button" ng-click="clearSelections()">No</button>
+        <button type="button" id="delete-notes-button-yes" class="btn delete-confirmation-button" ng-click="removeSelectedNotes()">Yes</button>
     </span>
 </div>

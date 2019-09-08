@@ -10,7 +10,6 @@ angular.module('quickNotes')
   controller: function($scope, $uibModal) {
     this.$onInit = function() {
       $scope.selectAll = false;
-      $scope.noteSelections = new Array(this.notes.length);
       $scope.notes = this.notes;
       $scope.sort = {
         column: "id",
@@ -19,7 +18,9 @@ angular.module('quickNotes')
     }
 
     $scope.toggleSelectAll = function() {
-      this.noteSelections.fill(this.selectAll);
+      for(let i = 0; i < this.notes.length; i++) {
+        this.notes[i].selected = this.selectAll;
+      }
     }
 
     $scope.changeSorting = function(column) {
@@ -33,7 +34,7 @@ angular.module('quickNotes')
     }
 
     $scope.openAddNoteDialog = function() {
-      let addDialog = $uibModal.open({
+      $uibModal.open({
         templateUrl: "note-table/add-note-dialog.html",
         controller: "AddNoteController"
       });

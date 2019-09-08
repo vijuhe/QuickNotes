@@ -28,6 +28,10 @@ class NoteService {
 
     addNote(note) {
     }
+
+    deleteNotes(noteIds) {
+        alert('deleting notes.');
+    }
 }
 
 export default NoteService;
