@@ -24,7 +24,7 @@
     </tr>
     <tr class="note-table-data-row" ng-repeat="note in $ctrl.notes | orderBy:sort.column:sort.descending">
         <td class="note-table-data-id">
-            <input type="checkbox" class="note-table-checkbox" ng-model="notes[note.id-1].selected"/>{{note.id}}
+            <input type="checkbox" class="note-table-checkbox" ng-model="note.selected"/>{{note.id}}
         </td>
         <td>{{note.title}}</td>
         <td>{{note.content}}</td>
