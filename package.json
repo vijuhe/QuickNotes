@@ -7,6 +7,7 @@
     "angular-ui-bootstrap-4": "^3.0.0-7"
   },
   "devDependencies": {
+    "@fortawesome/fontawesome-free": "^5.10.2",
     "cpx": "^1.5.0",
     "http-server": "^0.11.1"
   },
@@ -14,7 +15,7 @@
     "postinstall": "npm run copy-libs",
     "update-deps": "npm update",
     "postupdate-deps": "npm run copy-libs",
-    "copy-libs": "cpx \"node_modules/{angular,angular-*,html5-boilerplate/dist}/**/*\" app/lib -C",
+    "copy-libs": "cpx \"node_modules/{angular,angular-*,html5-boilerplate/dist,@fortawesome/fontawesome-free}/**/*\" app/lib -C",
     "prestart": "npm install",
     "start": "http-server -a localhost -p 8000 -c-1 ./app"
   }

@@ -82,3 +82,38 @@
 #add-note-dialog {
   padding: 20px;
 }
+
+#delete-confirmation-container {
+  background-color: red;
+  margin-top: 25px;
+  padding: 5px 5px 5px 10px;
+  overflow: hidden;
+}
+
+.delete-confirmation-button {
+  width: 100px;
+}
+
+#delete-notes-button-no {
+  background-color: red;
+  color: white;
+}
+
+#delete-notes-button-yes {
+  background-color: white;
+  color: red;
+}
+
+#delete-notes-question {
+  color:white;
+  margin-left: 5px;
+  line-height: 36px;
+}
+
+#delete-confirmation-buttons {
+  float: right;
+}
+
+#delete-confirmation-icon {
+  color: white;
+}
