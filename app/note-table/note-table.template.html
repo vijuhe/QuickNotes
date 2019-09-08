@@ -1,11 +1,26 @@
 <table id="note-table" class="table">
     <tr id="note-table-header">
         <th ng-click="changeSorting('id')">
-            <input ng-click="$event.stopPropagation()" type="checkbox" class="note-table-checkbox" ng-change="toggleSelectAll()" ng-model="selectAll"/>ID
+            <input ng-click="$event.stopPropagation()" type="checkbox" class="note-table-checkbox" ng-change="toggleSelectAll()" ng-model="selectAll"/>
+            ID
+            <i class="note-table-sort-arrows note-table-sort-arrow-up" ng-class="getSortClass('id', false)"></i>
+            <i class="note-table-sort-arrows note-table-sort-arrow-down" ng-class="getSortClass('id', true)"></i>
         </th>
-        <th ng-click="changeSorting('title')">Title</th>
-        <th ng-click="changeSorting('content')">Content</th>
-        <th ng-click="changeSorting('status')">Status</th>
+        <th ng-click="changeSorting('title')">
+            Title
+            <i class="note-table-sort-arrows note-table-sort-arrow-up" ng-class="getSortClass('title', false)"></i>
+            <i class="note-table-sort-arrows note-table-sort-arrow-down" ng-class="getSortClass('title', true)"></i>
+        </th>
+        <th ng-click="changeSorting('content')">
+            Content
+            <i class="note-table-sort-arrows note-table-sort-arrow-up" ng-class="getSortClass('content', false)"></i>
+            <i class="note-table-sort-arrows note-table-sort-arrow-down" ng-class="getSortClass('content', true)"></i>
+         </th>
+        <th ng-click="changeSorting('status')"
+            >Status
+            <i class="note-table-sort-arrows note-table-sort-arrow-up" ng-class="getSortClass('status', false)"></i>
+            <i class="note-table-sort-arrows note-table-sort-arrow-down" ng-class="getSortClass('status', true)"></i>
+        </th>
     </tr>
     <tr class="note-table-data-row" ng-repeat="note in $ctrl.notes | orderBy:sort.column:sort.descending">
         <td class="note-table-data-id">

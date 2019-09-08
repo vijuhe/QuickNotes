@@ -117,3 +117,31 @@
 #delete-confirmation-icon {
   color: white;
 }
+
+.note-table-sort-arrows {
+  padding: 2px;
+  float: right;
+}
+
+.note-table-sort-arrow-up {
+  transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+  margin-top: 4px;
+}
+
+.note-table-sort-arrow-down {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  margin-right: -5px;
+  margin-top: 10px;
+}
+
+.note-table-sort-current {
+  border: solid white;
+  border-width: 0 2px 2px 0;
+}
+
+.note-table-sort-not-current {
+  border: solid rgb(230, 230, 230);
+  border-width: 0 1px 1px 0;
+}

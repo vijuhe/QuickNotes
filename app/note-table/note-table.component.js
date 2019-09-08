@@ -33,6 +33,11 @@ angular.module('quickNotes')
       }
     }
 
+    $scope.getSortClass = function(column, descending) {
+      return this.sort.column === column && this.sort.descending === descending ?
+        "note-table-sort-current" : "note-table-sort-not-current";
+    }
+
     $scope.openAddNoteDialog = function() {
       $uibModal.open({
         templateUrl: "note-table/add-note-dialog.html",
